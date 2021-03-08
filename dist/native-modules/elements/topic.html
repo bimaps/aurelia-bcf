@@ -1,0 +1,29 @@
+<template class="bcf-topic">
+  <require from="./bcf.css"></require>
+  <require from="./topic.css"></require>
+  <ux-card theme.bind="bcf.topicCardTheme" if.bind="!hideTitle 
+    || topic.description 
+    || topic.topic_type
+    || topic.topic_status
+    || topic.priority
+    || topic.stage
+    || topic.due_date
+    || topic.assigned_to
+    ">
+    <ux-card-content>
+      <template if.bind="!hideTitle">
+        <div class="ux-card__title">${topic.title}</div>
+      </template>
+      <p if.bind="topic.description">${topic.description}</p>
+      <div class="ux-card__sub-title">
+        <ux-chip if.bind="topic.topic_type">${topic.topic_type}</ux-chip>
+        <ux-chip if.bind="topic.topic_status">${topic.topic_status}</ux-chip>
+        <ux-chip if.bind="topic.priority">${topic.priority}</ux-chip>
+        <ux-chip if.bind="topic.stage">${topic.stage}</ux-chip>
+        <ux-chip if.bind="topic.due_date">${topic.due_date | date}</ux-chip>
+        <ux-chip if.bind="topic.assigned_to">${topic.assigned_to}</ux-chip>
+      </div>
+    </ux-card-content>
+  </ux-card>
+  <bcf-comment data-comment-id="${comment.guid}" repeat.for="comment of comments" project-id.bind="projectId" topic-id.bind="topicId" comment-id.bind="comment.guid"></bcf-comment>
+</template>

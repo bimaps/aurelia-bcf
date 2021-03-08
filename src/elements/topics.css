@@ -1,0 +1,7 @@
+.bcf-topics__list {
+  overflow-y: auto;
+}
+
+.bcf-topics__lsit .ux-list-item {
+  cursor: pointer;
+}

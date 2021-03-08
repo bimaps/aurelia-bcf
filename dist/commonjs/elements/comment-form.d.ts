@@ -1,0 +1,31 @@
+import { BcfTopicInterface, BcfProjectInterface } from '../models/index';
+import { AureliaBcf } from '../aurelia-bcf';
+export declare class CommentForm {
+    private bcf;
+    private eventAggregator;
+    private element;
+    projectId: string;
+    topicId: string;
+    commentId: string;
+    private instance;
+    private viewpointInstance;
+    private subscriptions;
+    private isAttached;
+    private updateSnapshotWhenAttached;
+    constructor(bcf: AureliaBcf, eventAggregator: any, element: HTMLElement);
+    bind(): void;
+    attached(): void;
+    private setSnapshot;
+    detached(): void;
+    private fetchProjectExtensions;
+    private setNewInstance;
+    private setNewViewpointInstance;
+    private setInstanceFromState;
+    private setInstanceFromApi;
+    private setViewpointInstanceFromApi;
+    get project(): BcfProjectInterface;
+    get topic(): BcfTopicInterface;
+    private dispatchViewpoint;
+    addIfcToViewpoint(ifcGuid: string): void;
+    removeIfcFromViewpoint(ifcGuid: string): void;
+}

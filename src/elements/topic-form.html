@@ -1,0 +1,44 @@
+<template class="bcf-topic-form">
+  <require from="./bcf.css"></require>
+  <require from="./topic-form.css"></require>
+  <ux-form if.bind="instance">
+    <ux-field>
+      <ux-input value.bind="instance.title" label="${'bcf.Title' | t}"></ux-input>
+    </ux-field>
+    <ux-field>
+      <ux-textarea value.bind="instance.description" auto-resize.bind="true" label="${'bcf.Description' | t}"></ux-textarea>
+    </ux-field>
+    <ux-field>
+      <ux-grid class="ux-grid--remove-padding">
+        <ux-grid-cell sm="6">
+            <ux-select value.bind="instance.topic_type" label="${'bcf.Type' | t}">
+              <ux-option repeat.for="type of project.extensions.topic_type">${type}</ux-option>
+            </ux-select>
+        </ux-grid-cell>
+        <ux-grid-cell sm="6">
+          <ux-select value.bind="instance.topic_status" label="${'bcf.Status' | t}">
+            <ux-option repeat.for="status of project.extensions.topic_status">${status}</ux-option>
+          </ux-select>
+        </ux-grid-cell>
+        <ux-grid-cell sm="6">
+          <ux-select value.bind="instance.priority" label="${'bcf.Priority' | t}">
+            <ux-option repeat.for="priority of project.extensions.priority">${priority}</ux-option>
+          </ux-select>
+        </ux-grid-cell>
+        <ux-grid-cell sm="6">
+          <ux-select value.bind="instance.stage" label="${'bcf.Stage' | t}">
+            <ux-option repeat.for="stage of project.extensions.stage">${stage}</ux-option>
+          </ux-select>
+        </ux-grid-cell>
+        <ux-grid-cell sm="6">
+          <ux-select value.bind="instance.assigned_to" label="${'bcf.Assigned To' | t}">
+            <ux-option repeat.for="user of project.extensions.user_id_type">${u}</ux-option>
+          </ux-select>
+        </ux-grid-cell>
+        <ux-grid-cell sm="6">
+          <ux-datepicker type="date" value.bind="instance.due_date" label="${'bcf.Due Date' | t}"></ux-datepicker>
+        </ux-grid-cell>
+      </ux-grid>
+    </ux-field>
+  </ux-form>
+</template>

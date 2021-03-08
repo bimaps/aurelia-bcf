@@ -1,0 +1,8 @@
+<template class="bcf-new-topic-form">
+  <require from="./bcf.css"></require>
+  <require from="./new-topic-form.css"></require>
+    <bcf-topic-form project-id.bind="projectId" instance.bind="topicInstance"></bcf-topic-form>
+    <ux-card-separator no-margin style="display:block"></ux-card-separator>
+    <bcf-comment-form project-id.bind="projectId" instance.bind="commentInstance" viewpoint-instance.bind="viewpointInstance"></bcf-comment-form>
+  </ux-form>
+</template>

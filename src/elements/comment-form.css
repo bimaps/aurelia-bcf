@@ -1,0 +1,14 @@
+.bcf-comment-form {
+  display: block;
+  padding: 16px;
+}
+
+.bcf-comment-form-comp-length {
+  background: #dadada;
+  padding: 8px;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  font-size: 14px;
+}

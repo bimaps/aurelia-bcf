@@ -1,0 +1,8 @@
+.bcf-comment__head {
+  display: flex;
+  justify-content: space-between;
+  --aurelia-ux--icon-size: 16px;
+}
+.bcf-comment__viewpoint {
+  color: var(--aurelia-ux--design-primary);
+}

@@ -1,0 +1,34 @@
+<template class="bcf-comment-form">
+  <require from="./bcf.css"></require>
+  <require from="./comment-form.css"></require>
+  <ux-form if.bind="instance">
+    <div class="bcf-topic-form__comment">
+      <ux-field>
+        <ux-textarea value.bind="instance.comment" auto-resize.bind="true" label="${'bcf.Comment' | t}"></ux-textarea>
+      </ux-field>
+    </div>
+    <ux-list>
+      <ux-list-item>
+        <div class="ux-list-item__detail ux-list-item__avatar">
+          <img style="width: 100px;" src.bind="viewpointInstance.snapshot.snapshot_data" if.bind="viewpointInstance.snapshot.snapshot_data">
+        </div>
+        <div class="ux-list-item__content" t="bcf.Include Viewpoint in Comment"></div>
+        <div class="ux-list-item__action-item"><ux-switch checked.bind="viewpointInstance.saveSnapshot"></ux-switch></div>
+      </ux-list-item>
+    </ux-list>
+    
+    <p class="muted" 
+      style="margin: 16px;" 
+      if.bind="!viewpointInstance.components.selection.length">
+      <span t="bcf.Add objects to your Viewpoint by selecting them in the viewer"></span>
+    </p>
+
+    <ux-list-item if.bind="viewpointInstance && viewpointInstance.components.selection.length">
+      <div class="ux-list-item__detail bcf-comment-form-comp-length">
+        ${viewpointInstance.components.selection.length}
+      </div>
+      <div class="ux-list-item__content" t="bcf.Include selected objects in Comment"></div>
+      <div class="ux-list-item__action-item"><ux-switch checked.bind="viewpointInstance.saveComponents"></ux-switch></div>
+    </ux-list-item>
+  </ux-form>
+</template>

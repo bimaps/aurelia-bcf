@@ -1,0 +1,9 @@
+.bcf-topics .ux-chip,
+.bcf-topic .ux-chip {
+  background: var(--aurelia-ux--design-accent-light);
+  color: var(--aurelia-ux--design-accent-foreground);
+  height: auto;
+  font-size: 12px;
+  padding: 5px 5px;
+  margin: 5px 3px;
+}

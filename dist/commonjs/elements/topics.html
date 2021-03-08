@@ -1,0 +1,24 @@
+<template class="bcf-topics">
+  <require from="./bcf.css"></require>
+  <require from="./topics.css"></require>
+  <ux-list class="ux-list--has-border bcf-topics__list">
+    <ux-list-item class="click" repeat.for="topic of topics" click.delegate="clickTopic(topic, $event)">
+      <div class="ux-list-item__content">
+        <div>
+          ${topic.title}
+          <ux-chip if.bind="topic.topic_type">${topic.topic_type}</ux-chip>
+          <ux-chip if.bind="topic.topic_status">${topic.topic_status}</ux-chip>
+          <ux-chip if.bind="topic.priority">${topic.priority}</ux-chip>
+          <ux-chip if.bind="topic.stage">${topic.stage}</ux-chip>
+          <ux-chip if.bind="topic.due_date">${topic.due_date | date}</ux-chip>
+          <ux-chip if.bind="topic.assigned_to">${topic.assigned_to}</ux-chip>
+        </div>
+        <div class="ux-list-item__secondary-content">
+        </div>
+      </div>
+      <div class="ux-list-item__action-item">
+        <ux-icon icon="chevron_right"></ux-icon>
+      </div>
+    </ux-list-item>
+  </ux-list>
+</template>

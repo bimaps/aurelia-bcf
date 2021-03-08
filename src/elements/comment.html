@@ -1,0 +1,25 @@
+<template class="bcf-comment">
+  <require from="./bcf.css"></require>
+  <require from="./comment.css"></require>
+  <ux-card theme.bind="bcf.commentCardTheme">
+    <ux-card-content>
+      <div class="bcf-comment__head" style="display: flex; justify-content: space-between;">
+      <small class="muted">${comment.date | bcfDate}
+        <br>${comment.author}</small>
+      <small class="muted">
+        <ux-icon icon="edit" class="click" click.delegate="clickEdit(comment.viewpoint_guid, $event)"></ux-icon>
+      </small>
+      </div>
+      <p class="bcf-comment__text">${comment.comment}</p>
+      <ux-list class="bcf-comment__viewpoint" if.bind="viewpoint(comment.viewpoint_guid)">
+        <ux-list-item class="click" click.delegate="clickViewpoint(comment.viewpoint_guid, $event)">
+          <div class="ux-list-item__detail ux-list-item__avatar" if.bind="viewpoint(comment.viewpoint_guid).snapshot && viewpoint(comment.viewpoint_guid).snapshot.snapshot_data">
+            <img src.bind="viewpoint(comment.viewpoint_guid).snapshot.snapshot_data" style="width: 100px;">
+          </div>
+          <div class="ux-list-item__content"><!-- <ux-button type="text">Show Viewpoint</ux-button> -->
+          <span t="bcf.Show Viewpoint"></span></div>
+        </ux-list-item>
+      </ux-list>
+    </ux-card-content>
+  </ux-card>
+</template>

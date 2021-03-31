@@ -34,5 +34,8 @@
   ],
   "atom": {
     "rewriteTsconfig": false
+  },
+  "typedocOptions": {
+    "out": "docs"
   }
 }

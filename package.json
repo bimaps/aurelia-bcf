@@ -39,7 +39,7 @@
     "through2": "^3.0.0",
     "ts-jest": "^24.0.0",
     "tslint": "^5.13.0",
-    "typescript": "^3.1.2",
+    "typescript": "^3.9.0",
     "vinyl-fs": "^3.0.3"
   },
   "scripts": {
@@ -107,6 +107,7 @@
     "moment": "^2.24.0",
     "node-html-parser": "^1.2.20",
     "ts-node": "^9.0.0",
+    "typedoc": "^0.20.34",
     "whatwg-fetch": "^3.0.0"
   }
 }

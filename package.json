@@ -1,12 +1,30 @@
 {
   "name": "aurelia-bcf",
   "description": "An Aurelia plugin project.",
-  "version": "0.1.0",
-  "repository": {
-    "type": "???",
-    "url": "???"
+  "version": "1.0.0",
+  "scripts": {
+    "build": "au build-plugin",
+    "start": "au run",
+    "watch": "au build-plugin --watch",
+    "xprepare": "npm run build",
+    "pretest": "au lint",
+    "preversion": "au test",
+    "test": "au test",
+    "dico": "ts-node --project dico-tool/tsconfig.json dico-tool/parse.ts",
+    "dico:send": "ts-node --project dico-tool/tsconfig.json dico-tool/send.ts"
   },
-  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bimaps/aurelia-bcf"
+  },
+  "author": "platform5",
+  "license": "AGPL-3.0-or-later",
+  "keywords": [
+    "aurelia",
+    "plugin",
+    "BCF",
+    "BIM"
+  ],
   "devDependencies": {
     "@types/jest": "^24.0.9",
     "@types/node": "^10.17.30",
@@ -41,17 +59,6 @@
     "tslint": "^5.13.0",
     "typescript": "^3.9.0",
     "vinyl-fs": "^3.0.3"
-  },
-  "scripts": {
-    "build": "au build-plugin",
-    "start": "au run",
-    "watch": "au build-plugin --watch",
-    "xprepare": "npm run build",
-    "pretest": "au lint",
-    "preversion": "au test",
-    "test": "au test",
-    "dico": "ts-node --project dico-tool/tsconfig.json dico-tool/parse.ts",
-    "dico:send": "ts-node --project dico-tool/tsconfig.json dico-tool/send.ts"
   },
   "engines": {
     "node": ">=8.9.0"

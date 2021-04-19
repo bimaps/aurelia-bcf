@@ -1,0 +1,18 @@
+/node_modules
+
+# Documentation
+/docs
+typedoc.json
+
+# Source
+/aurelia_project
+/config
+/dev-app
+/dico-tool
+/src
+/test
+favicon.ico
+index.html
+tsconfig.json
+tslint.json
+webpack.dev.js

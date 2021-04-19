@@ -94,11 +94,10 @@ export class BcfApi {
     return this.http.fetch(this.extendEntrpoint(entrypoint), o);
   }
 
-  public delete(entrypoint: string, body: any = {}, options: RequestOption = {}): Promise < any > {
+  public delete(entrypoint: string, options: RequestOption = {}): Promise < any > {
     this.configureHost();
     let o = this.defaultOptions(options);
     o.method = 'delete';
-    o.body = this.normalizeBody(body, options);
     return this.http.fetch(this.extendEntrpoint(entrypoint), o);
   }
 
@@ -113,7 +112,6 @@ export class BcfApi {
 const bcf = Container.instance.get(AureliaBcf);
 export async function jsonify(response: any): Promise<any> {
   bcf.debug('jsonify:start', response);
-  if (!response || !response.json) return Promise.resolve(response);
   if (response.status === 204) {
     return Promise.resolve({});
   }

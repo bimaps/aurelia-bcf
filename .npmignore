@@ -15,4 +15,3 @@ favicon.ico
 index.html
 tsconfig.json
 tslint.json
-webpack.dev.js

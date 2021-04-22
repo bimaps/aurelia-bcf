@@ -45,6 +45,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Topics = void 0;
 var aurelia_framework_1 = require("aurelia-framework");
 var aurelia_bcf_1 = require("../aurelia-bcf");
 var aurelia_pal_1 = require("aurelia-pal");
@@ -85,7 +86,7 @@ var Topics = (function () {
                 return [];
             return this.bcf.state.bcf.topics.filter(function (topic) { return topic._projectId === _this.projectId; });
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Topics.prototype.projectName = function (projectId) {

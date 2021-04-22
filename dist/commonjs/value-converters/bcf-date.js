@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BcfDateValueConverter = void 0;
 var moment = require("moment");
 var BcfDateValueConverter = (function () {
     function BcfDateValueConverter() {

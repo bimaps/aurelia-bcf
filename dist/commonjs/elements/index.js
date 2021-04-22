@@ -1,13 +1,20 @@
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(require("./comment-form"));
-__export(require("./comment"));
-__export(require("./new-topic-form"));
-__export(require("./topic-form"));
-__export(require("./topic"));
-__export(require("./topics"));
+__exportStar(require("./comment-form"), exports);
+__exportStar(require("./comment"), exports);
+__exportStar(require("./new-topic-form"), exports);
+__exportStar(require("./topic-form"), exports);
+__exportStar(require("./topic"), exports);
+__exportStar(require("./topics"), exports);
 
 //# sourceMappingURL=index.js.map

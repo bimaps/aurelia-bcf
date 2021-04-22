@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BcfViewpointService = void 0;
 var aurelia_framework_1 = require("aurelia-framework");
 var bcf_api_1 = require("../bcf-api");
 var store_1 = require("../store/store");

@@ -7,6 +7,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.AureliaBcf = void 0;
 var store_1 = require("./store");
 var aurelia_logging_1 = require("aurelia-logging");
 var AureliaBcf = (function () {

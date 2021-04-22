@@ -17,6 +17,7 @@ export function configure(aurelia, config) {
 }
 export { AureliaBcf } from './aurelia-bcf';
 export { BcfApi } from './bcf-api';
+export * from './models';
 export * from './services';
 export * from './store';
 export * from './elements';

@@ -1,8 +1,16 @@
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.configure = void 0;
 var aurelia_framework_1 = require("aurelia-framework");
 var aurelia_pal_1 = require("aurelia-pal");
 var aurelia_bcf_1 = require("./aurelia-bcf");
@@ -22,12 +30,13 @@ function configure(aurelia, config) {
 }
 exports.configure = configure;
 var aurelia_bcf_2 = require("./aurelia-bcf");
-exports.AureliaBcf = aurelia_bcf_2.AureliaBcf;
+Object.defineProperty(exports, "AureliaBcf", { enumerable: true, get: function () { return aurelia_bcf_2.AureliaBcf; } });
 var bcf_api_1 = require("./bcf-api");
-exports.BcfApi = bcf_api_1.BcfApi;
-__export(require("./services"));
-__export(require("./store"));
-__export(require("./elements"));
-__export(require("./value-converters"));
+Object.defineProperty(exports, "BcfApi", { enumerable: true, get: function () { return bcf_api_1.BcfApi; } });
+__exportStar(require("./models"), exports);
+__exportStar(require("./services"), exports);
+__exportStar(require("./store"), exports);
+__exportStar(require("./elements"), exports);
+__exportStar(require("./value-converters"), exports);
 
 //# sourceMappingURL=index.js.map

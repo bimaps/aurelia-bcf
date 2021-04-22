@@ -117,7 +117,7 @@ var TopicForm = (function () {
                 return undefined;
             return this.bcf.state.bcf.projects.filter(function (project) { return project.project_id === _this.projectId; })[0];
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     __decorate([

@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Comment = void 0;
 var aurelia_framework_1 = require("aurelia-framework");
 var aurelia_bcf_1 = require("../aurelia-bcf");
 var aurelia_pal_1 = require("aurelia-pal");
@@ -24,7 +25,7 @@ var Comment = (function () {
                 undefined;
             return this.bcf.state.bcf.projects.filter(function (project) { return project.project_id === _this.projectId; })[0];
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Comment.prototype, "topic", {
@@ -36,7 +37,7 @@ var Comment = (function () {
                 return undefined;
             return this.bcf.state.bcf.topics.filter(function (topic) { return topic.guid === _this.topicId; })[0];
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Comment.prototype, "comment", {
@@ -50,7 +51,7 @@ var Comment = (function () {
                 return undefined;
             return this.bcf.state.bcf.comments.filter(function (comment) { return comment.guid === _this.commentId; })[0];
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Comment.prototype.viewpoint = function (viewpoint_guid) {

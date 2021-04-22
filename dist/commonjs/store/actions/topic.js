@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.registerTopicActions = exports.removeTopic = exports.setTopic = exports.setTopics = void 0;
 var store_1 = require("../../store/store");
 function setTopics(state, topics, projectId) {
     var newState = Object.assign({}, state);

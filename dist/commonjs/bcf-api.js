@@ -45,6 +45,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.jsonify = exports.BcfApi = void 0;
 var aurelia_framework_1 = require("aurelia-framework");
 var aurelia_fetch_client_1 = require("aurelia-fetch-client");
 var aurelia_bcf_1 = require("./aurelia-bcf");

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.registerCommentActions = exports.removeComment = exports.setComment = exports.setComments = void 0;
 var store_1 = require("../../store/store");
 function setComments(state, comments, projectId, topicId) {
     var newState = Object.assign({}, state);

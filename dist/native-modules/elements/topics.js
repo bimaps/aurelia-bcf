@@ -83,7 +83,7 @@ var Topics = (function () {
                 return [];
             return this.bcf.state.bcf.topics.filter(function (topic) { return topic._projectId === _this.projectId; });
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Topics.prototype.projectName = function (projectId) {

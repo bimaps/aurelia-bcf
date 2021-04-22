@@ -43,6 +43,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.dispatcher = exports.store = void 0;
 var aurelia_framework_1 = require("aurelia-framework");
 var aurelia_store_1 = require("aurelia-store");
 var store = function () {

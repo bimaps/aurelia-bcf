@@ -45,6 +45,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommentForm = void 0;
 var aurelia_framework_1 = require("aurelia-framework");
 var aurelia_bcf_1 = require("../aurelia-bcf");
 var index_1 = require("../services/index");
@@ -224,7 +225,7 @@ var CommentForm = (function () {
                 return undefined;
             return this.bcf.state.bcf.projects.filter(function (project) { return project.project_id === _this.projectId; })[0];
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(CommentForm.prototype, "topic", {
@@ -234,7 +235,7 @@ var CommentForm = (function () {
                 return undefined;
             return this.bcf.state.bcf.topics.filter(function (topic) { return topic.guid === _this.topicId; })[0];
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     CommentForm.prototype.dispatchViewpoint = function () {

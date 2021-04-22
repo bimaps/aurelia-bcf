@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.registerViewpointActions = exports.removeViewpoint = exports.setViewpoint = exports.setViewpoints = void 0;
 var store_1 = require("../../store/store");
 function setViewpoints(state, viewpoints, projectId, topicId) {
     var newState = Object.assign({}, state);

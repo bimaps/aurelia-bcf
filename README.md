@@ -1,5 +1,14 @@
-# `aurelia-bcf`
+# aurelia-bcf
 
+## General info
+
+This project and the client part of the BCF manager based on the [BCF-API](https://github.com/buildingSMART/BCF-API) standard
+
+This package is dependent on the backend part :
+[Deco-BCF](https://github.com/bimaps/deco-bcf)
+
+
+## Aurelia notes
 This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
 
 This Aurelia plugin project has a built-in dev app (with CLI built-in bundler and RequireJS) to simplify development.
